@@ -48,16 +48,31 @@ const ColorButton = styled(Button)(({ theme }) => ({
     },
 }));
 
-export default function LogInButton() {
+export default function LogInButton({name}) {
     return (
         <Stack spacing={2} direction="row">
             <ColorButton
                 variant="contained"
                 sx={{
-                    borderRadius:'10px', width: '100px'
+                    borderRadius:'10px', width: '200px'
                 }}
 
-            >LOGIN</ColorButton>
+            >{name}</ColorButton>
         </Stack>
+    );
+}
+
+export function CreateAccountButton() {
+    return (
+        <Button variant="contained"
+                color="success"
+                sx={{
+                    height:'30px'
+
+                }}
+
+        >
+            Create new account
+        </Button>
     );
 }

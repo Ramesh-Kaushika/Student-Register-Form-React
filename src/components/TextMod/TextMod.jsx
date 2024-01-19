@@ -11,6 +11,7 @@ import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import React from "react";
+import {FormLabel} from "@mui/material";
 
 export function TextPassword() {
 
@@ -66,4 +67,16 @@ export function TextPassword() {
 
     )
 
+}
+
+export function FormTextField({ho,P1,M1}) {
+
+    return(
+        <FormControl>
+            <FormLabel>{ho}</FormLabel>
+            <Input placeholder={P1}/>
+            <FormHelperText>{M1}</FormHelperText>
+        </FormControl>
+    )
+    
 }
